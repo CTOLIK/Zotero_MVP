@@ -16,16 +16,16 @@
 
 package com.example.zoteromvp;
 
-import static com.example.myapplication.HttpHeaders.IF_MODIFIED_SINCE_VERSION;
+import static com.example.zoteromvp.HttpHeaders.IF_MODIFIED_SINCE_VERSION;
 
-import com.example.myapplication.model.*;
-import com.example.myapplication.model.Collection;
-import com.example.myapplication.model.Group;
-import com.example.myapplication.model.Item;
-import com.example.myapplication.model.Key;
-import com.example.myapplication.model.ObjectVersions;
-import com.example.myapplication.model.Search;
-import com.example.myapplication.model.Tag;
+import com.example.zoteromvp.model.*;
+import com.example.zoteromvp.model.Collection;
+import com.example.zoteromvp.model.Group;
+import com.example.zoteromvp.model.Item;
+import com.example.zoteromvp.model.Key;
+import com.example.zoteromvp.model.ObjectVersions;
+import com.example.zoteromvp.model.Search;
+import com.example.zoteromvp.model.Tag;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -47,7 +47,7 @@ public interface ZoteroService {
     /**
      * The set of all items in the library
      *
-     * @param searchQuery Search parameters for the result set. May be null to apply no search parameters
+     * //@param searchQuery Search parameters for the result set. May be null to apply no search parameters
      */
 
     // I try
@@ -57,6 +57,9 @@ public interface ZoteroService {
 
 
     // I try
+
+//    @POST("/keys")
+//    retrofit2.Response<LoginResponse> loginUser(@Body LoginRequest body);
 
     @GET("/{type}/{id}/items")
     Observable<List<Item>> getItems(@Path(TYPE) LibraryType type,
@@ -86,7 +89,7 @@ public interface ZoteroService {
      * The set of all top-level items in the library
      */
     @GET("/{type}/{id}/items/top")
-    Observable<List<Item>> getTopLevelItems(@Path(TYPE) LibraryType type,
+    Observable<Response> getTopLevelItems(@Path(TYPE) LibraryType type,
                                             @Path(ID) long id,
                                             @Nullable @QueryMap Map searchQuery,
                                             @Nullable @Header(IF_MODIFIED_SINCE_VERSION) String libraryVersion);
@@ -95,7 +98,7 @@ public interface ZoteroService {
      * The set of items in the trash
      */
     @GET("/{type}/{id}/items/trash")
-    Observable<List<Item>> getTrashItems(@Path(TYPE) LibraryType type,
+    Observable<Response> getTrashItems(@Path(TYPE) LibraryType type,
                                          @Path(ID) long id,
                                          @Nullable @QueryMap Map searchQuery);
 
@@ -112,7 +115,7 @@ public interface ZoteroService {
      * The set of all child items under a specific item
      */
     @GET("/{type}/{id}/items/{itemKey}/children")
-    Observable<List<Item>> getItemChildren(@Path(TYPE) LibraryType type,
+    Observable<Response> getItemChildren(@Path(TYPE) LibraryType type,
                                            @Path(ID) long id,
                                            @Path("itemKey") String itemKey);
 
@@ -144,7 +147,7 @@ public interface ZoteroService {
      * The set of collections in the library
      */
     @GET("/{type}/{id}/collections")
-    Observable<List<Collection>> getCollections(@Path(TYPE) LibraryType type,
+    Observable<Response> getCollections(@Path(TYPE) LibraryType type,
                                                 @Path(ID) long id,
                                                 @Nullable @Header(IF_MODIFIED_SINCE_VERSION) String libraryVersion);
 
@@ -176,7 +179,7 @@ public interface ZoteroService {
      * The set of all items within a specific collection in the library
      */
     @GET("/{type}/{id}/collections/{collectionKey}/items")
-    Observable<List<Item>> getCollectionItems(@Path(TYPE) LibraryType type,
+    Observable<Response> getCollectionItems(@Path(TYPE) LibraryType type,
                                               @Path(ID) long id,
                                               @Path("collectionKey") String collectionKey,
                                               @Nullable @QueryMap Map searchQuery,
