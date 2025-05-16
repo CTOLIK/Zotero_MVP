@@ -18,7 +18,6 @@ package com.example.zoteromvp;
 
 import static com.example.zoteromvp.HttpHeaders.IF_MODIFIED_SINCE_VERSION;
 
-import com.example.zoteromvp.model.*;
 import com.example.zoteromvp.model.Collection;
 import com.example.zoteromvp.model.Group;
 import com.example.zoteromvp.model.Item;
@@ -155,7 +154,7 @@ public interface ZoteroService {
      * The set of all top-level collections in the library
      */
     @GET("/{type}/{id}/collections/top")
-    Observable<List<Collection>> getTopLevelCollections(@Path(TYPE) LibraryType type,
+    Observable<List<java.util.Collection>> getTopLevelCollections(@Path(TYPE) LibraryType type,
                                                         @Path(ID) long id,
                                                         @Nullable @Header(IF_MODIFIED_SINCE_VERSION) String libraryVersion);
 

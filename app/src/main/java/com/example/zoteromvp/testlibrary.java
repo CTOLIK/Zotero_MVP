@@ -5,7 +5,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -57,9 +56,9 @@ public class testlibrary extends AppCompatActivity {
         ArrayAdapter<String> list_adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, ar_data);
 
-        ListView listView1 = findViewById(R.id.TESTList);
+       // ListView listView1 = findViewById(R.id.TESTList);
 
-        listView1.setAdapter(list_adapter);
+     //   listView1.setAdapter(list_adapter);
 
         TableLayout nt = (TableLayout) findViewById(R.id.tableLayout2_2);
 

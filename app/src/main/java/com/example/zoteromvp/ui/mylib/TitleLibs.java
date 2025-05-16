@@ -36,12 +36,14 @@ public class TitleLibs extends AppCompatActivity {
             String nameofvalue = row_data.split("\\|")[1].split(":")[0];
             String value = row_data.split("\\|")[1].split(":")[1];
 
-            //if (!Objects.equals(nameofvalue, "creators")){
+         //   Log.e("TEST", row_data);
+
+           // if (!Objects.equals(nameofvalue, "creators")){
                 if ((Objects.equals(nameofvalue, "caseName")) || (Objects.equals(nameofvalue, "title"))){
                     ar_title.add(value);
                     ar_title_key.add(row_data.split("\\|")[0]);
                 }
-           // }
+         //   }
 
         }
 

@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -53,6 +52,7 @@ public class Users_libraries extends AppCompatActivity {
                 ArrayList<String> datakey = new ArrayList<>();
                 ArrayList<String> datapost = new ArrayList<>();
 
+                assert allData != null;
                 for(String row_data:allData){
                     String key = row_data.split("\\|")[0];
                     String nameofvalue = row_data.split("\\|")[1].split(":")[0];
@@ -61,7 +61,7 @@ public class Users_libraries extends AppCompatActivity {
                     if (Objects.equals(nameofvalue, "collections")){
                         if (Objects.equals(keyCol, value)){
                             datatopost_keys.add(key);
-                            Toast.makeText(Users_libraries.this, key, Toast.LENGTH_SHORT).show();
+                           // Toast.makeText(Users_libraries.this, key, Toast.LENGTH_SHORT).show();
                         }
                     }
 
@@ -85,7 +85,7 @@ public class Users_libraries extends AppCompatActivity {
 //                            datatopost_keys.add(value);
 //                        }\
                             datapost.add(row_data);
-                            Toast.makeText(Users_libraries.this, row_data, Toast.LENGTH_SHORT).show();
+                         //   Toast.makeText(Users_libraries.this, row_data, Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
@@ -107,17 +107,10 @@ public class Users_libraries extends AppCompatActivity {
             }
         });
 
-
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-
-
-
-
-
 
         });
     }
