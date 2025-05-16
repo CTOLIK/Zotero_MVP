@@ -13,8 +13,10 @@
         android:layout_marginTop="72dp"
         android:autofillHints=""
         android:ems="10"
-        android:inputType="number"
         android:hint="@string/Autoriz_Login"
+        android:inputType="number"
+        android:textColor="@color/coloract"
+        android:textColorHint="#E57373"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,8 +29,10 @@
         android:layout_marginTop="36dp"
         android:autofillHints=""
         android:ems="10"
-        android:inputType="textPassword"
         android:hint="@string/Autoriz_Pass"
+        android:inputType="textPassword"
+        android:textColor="@color/coloract"
+        android:textColorHint="#E57373"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LoginText" />
@@ -38,10 +42,12 @@
         android:layout_width="179dp"
         android:layout_height="53dp"
         android:layout_marginTop="68dp"
+        android:background="#FFFFFF"
         android:text="@string/Autoriz_SignIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PassText" />
+        app:layout_constraintTop_toBottomOf="@+id/PassText"
+        app:strokeColor="#FFFFFF" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

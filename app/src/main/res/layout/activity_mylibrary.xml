@@ -9,10 +9,8 @@
 
     <ListView
         android:id="@+id/MyLibrary"
-        android:layout_width="395dp"
-        android:layout_height="664dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="409dp"
+        android:layout_height="335dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
