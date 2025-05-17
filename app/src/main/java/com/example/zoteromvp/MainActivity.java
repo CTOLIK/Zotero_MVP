@@ -66,12 +66,12 @@ public class MainActivity extends AppCompatActivity {
         // Для удобства заранее вносим необходимые данные для авторизации (User ID и Access Key)
 
             // Данные для входа в библиотеку 1.
-          login_text.setText("743083");
-          pass_text.setText("vLLtTQU1tcWCPb3Grsl6GzWi");
+        //login_text.setText("743083");
+         // pass_text.setText("vLLtTQU1tcWCPb3Grsl6GzWi");
 
             // Данные для входа в библиотеку 2.
-          //  login_text.setText("17116393");
-         //   pass_text.setText("vrNSxghdhbqT82b1TPLsjVn5");
+            login_text.setText("17116393");
+            pass_text.setText("vrNSxghdhbqT82b1TPLsjVn5");
 
         // Создаём ArrayList'ы для хранения данных из ответа esponse Zotero API
         ArrayList<String> dt_Collections = new ArrayList<>(); // Для коллекций
